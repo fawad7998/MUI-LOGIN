@@ -173,16 +173,18 @@ const Home = () => {
           >
             or continue with
           </div>
-          <img
-            style={{
-              // fontSize: '14px',
-              height: '35px',
-              paddingTop: '20px',
-              paddingLeft: '90px',
-            }}
-            src={Group}
-            alt="/"
-          />
+          <a href="">
+            <img
+              style={{
+                // fontSize: '14px',
+                height: '35px',
+                paddingTop: '20px',
+                paddingLeft: '90px',
+              }}
+              src={Group}
+              alt="/"
+            />
+          </a>
         </Grid>
       </Grid>
     </>
