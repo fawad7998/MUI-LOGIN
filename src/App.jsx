@@ -1,9 +1,9 @@
-import './App.css';
-import LoginPage from './loginPage/loginpage';
+import Home from './Routes/Home';
+
 function App() {
   return (
     <>
-      <LoginPage />
+      <Home />
     </>
   );
 }
