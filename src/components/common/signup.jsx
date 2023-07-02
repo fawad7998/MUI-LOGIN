@@ -190,44 +190,8 @@ const Signup = () => {
         }}
         variant="contained"
       >
-        Sign In
+        Sign Up
       </Button>
-      <div
-        style={{
-          fontSize: '14px',
-          paddingTop: '80px',
-          paddingLeft: '100px',
-          // fontWeight: 'bolder',
-          // display: 'flex',
-          // right: '60px',
-          // float: 'right',
-          // top: '400px',
-        }}
-      >
-        or continue with
-      </div>
-      <a href="">
-        <img
-          style={{
-            // fontSize: '14px',
-            height: '35px',
-            paddingTop: '20px',
-            paddingLeft: '90px',
-          }}
-          src=""
-          alt="/"
-        />
-        <img
-          style={{
-            // fontSize: '14px',
-            height: '35px',
-            paddingTop: '20px',
-            paddingLeft: '90px',
-          }}
-          src=""
-          alt="/"
-        />
-      </a>
     </Grid>
   );
 };
