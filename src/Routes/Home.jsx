@@ -1,12 +1,12 @@
-import React from 'react';
 import {Grid, Stack} from '@mui/material';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import svg1 from '../assets/static/svg1.svg';
-import Group from '../assets/static/Group.png';
-import Button from '@mui/material/Button';
-import {blue} from '@mui/material/colors';
+import svg1 from '/assets/static/svg1.svg';
+import Signup from '../components/common/signup.jsx';
+import Signin from '../components/common/signin.jsx';
+import {useState} from 'react';
+
+import * as React from 'react';
 const Home = () => {
+  const [Form, setActiveForm] = useState('Signin');
   return (
     <>
       <div
@@ -67,18 +67,36 @@ const Home = () => {
                   }
                 }
               >
-                You can{' '}
-                <a
-                  style={{
-                    textDecoration: 'none',
-                    color: '#1976d2',
-                    fontSize: '16px',
-                    fontweight: 'bolder',
-                  }}
-                  href="/"
-                >
-                  Register here !
-                </a>
+                You can
+                {Form == 'Signin' ? (
+                  <button
+                    style={{
+                      textDecoration: 'none',
+                      border: 'none',
+                      background: 'white',
+                      color: '#1976d2',
+                      fontSize: '16px',
+                      fontweight: 'bolder',
+                    }}
+                    onClick={() => setActiveForm('Signup')}
+                  >
+                    Register Here
+                  </button>
+                ) : (
+                  <button
+                    style={{
+                      textDecoration: 'none',
+                      border: 'none',
+                      background: 'white',
+                      color: '#1976d2',
+                      fontSize: '16px',
+                      fontweight: 'bolder',
+                    }}
+                    onClick={() => setActiveForm('Signin')}
+                  >
+                    SignIn Here
+                  </button>
+                )}
               </div>
             </div>
 
@@ -88,7 +106,7 @@ const Home = () => {
                 left: '80px',
                 // padding: '20px',
                 // margin: '30px',
-                height: '400px',
+                height: '370px',
               }}
               src={svg1}
               alt="/"
@@ -96,96 +114,10 @@ const Home = () => {
           </div>
         </Grid>
 
-        <Grid
-          item
-          lg={'6'}
-          md={'6'}
-          xs={'12'}
-          sx={{margin: '120px auto'}}
-          style={{position: 'relative', left: '100px'}}
-        >
-          <div
-            style={{
-              fontSize: '20px',
-              // paddingTop: '15px',
-              paddingLeft: '30px',
-              fontWeight: 'bolder',
-            }}
-          >
-            Sign in
-          </div>
+        {Form == 'Signin' ? <Signin /> : <Signup />}
 
-          <Box
-            component="form"
-            sx={{
-              paddingLeft: '30px',
-              '& > :not(style)': {width: '25ch', top: '10px'},
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              id="outlined-basic"
-              label="Enter email or user name"
-              variant="outlined"
-            />
-          </Box>
-          <Box
-            component="form"
-            sx={{
-              paddingLeft: '30px',
-
-              '& > :not(style)': {width: '25ch', top: '40px'},
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              id="outlined-basic"
-              label="Password"
-              variant="outlined"
-            />
-          </Box>
-          <Button
-            style={{
-              width: '270px',
-              color: '4D47C3',
-              position: 'relative',
-              top: '70px',
-              left: '30px',
-              // paddingLeft: '30px',
-            }}
-            variant="contained"
-          >
-            Sign In
-          </Button>
-          <div
-            style={{
-              fontSize: '14px',
-              paddingTop: '80px',
-              paddingLeft: '100px',
-              // fontWeight: 'bolder',
-              // display: 'flex',
-              // right: '60px',
-              // float: 'right',
-              // top: '400px',
-            }}
-          >
-            or continue with
-          </div>
-          <a href="">
-            <img
-              style={{
-                // fontSize: '14px',
-                height: '35px',
-                paddingTop: '20px',
-                paddingLeft: '90px',
-              }}
-              src={Group}
-              alt="/"
-            />
-          </a>
-        </Grid>
+        {/* <Signupform /> */}
+        {/* <Signin /> */}
       </Grid>
     </>
   );
