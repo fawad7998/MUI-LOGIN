@@ -117,18 +117,18 @@ const Signin = () => {
       >
         or continue with
       </div>
-      <a href="">
+      {/* <a href="">
         <img
           style={{
             // fontSize: '14px',
-            height: '35px',
-            paddingTop: '20px',
-            paddingLeft: '90px',
+            // height: '35px',
+            // paddingTop: '20px',
+            // paddingLeft: '90px',
           }}
           src=""
           alt="/"
         />
-      </a>
+      </a> */}
     </Grid>
   );
 };
