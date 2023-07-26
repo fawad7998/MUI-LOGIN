@@ -10,9 +10,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-
-// import Group from '../assets';
-
+import {Link} from 'react-router-dom';
+import Changingstate from './USESTATE';
 const Signin = () => {
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -117,13 +116,24 @@ const Signin = () => {
       >
         or continue with
       </div>
+      {/* <Button
+        style={{
+          width: '270px',
+          color: '4D47C3',
+          position: 'relative',
+          // top: '70px',
+          left: '30px',
+          // paddingLeft: '30px',
+        }}
+        variant="contained"
+      ></Button> */}
       {/* <a href="">
         <img
           style={{
             // fontSize: '14px',
             // height: '35px',
             // paddingTop: '20px',
-            // paddingLeft: '90px',
+            // p addingLeft: '90px',
           }}
           src=""
           alt="/"

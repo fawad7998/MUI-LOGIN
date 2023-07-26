@@ -1,14 +1,16 @@
+import * as React from 'react';
 import {Grid, Stack} from '@mui/material';
 import svg1 from '/assets/static/svg1.svg';
 import Signup from '../components/common/signup.jsx';
 import Signin from '../components/common/signin.jsx';
+import Changingstate from '../components/common/USESTATE.jsx';
 import {useState} from 'react';
-
-import * as React from 'react';
+import {Link} from 'react-router-dom';
 const Home = () => {
   const [Form, setActiveForm] = useState('Signin');
   return (
     <>
+      {/* <Changingstate /> */}
       <div
         style={{
           fontfamily: 'Poppins',
@@ -112,6 +114,7 @@ const Home = () => {
               alt="/"
             />
           </div>
+          <Link to="/ali">users</Link>
         </Grid>
 
         {Form == 'Signin' ? <Signin /> : <Signup />}
@@ -124,3 +127,7 @@ const Home = () => {
 };
 
 export default Home;
+
+// img issue
+// css file issue
+// how to import css file in react ?
