@@ -3,11 +3,22 @@ import {Grid, Stack} from '@mui/material';
 import svg1 from '/assets/static/svg1.svg';
 import Signup from '../components/common/signup.jsx';
 import Signin from '../components/common/signin.jsx';
-import Changingstate from '../components/common/USESTATE.jsx';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
   const [Form, setActiveForm] = useState('Signin');
+  // setTimeout(() => {
+  //   toast('this is awesome');
+  // }, );
+  // useEffect(() => {
+  //   toast('this is awesom');
+  // }, []);
+  const toastify = useEffect(() => {
+    toast('Successfully copied');
+  }, []);
+
   return (
     <>
       {/* <Changingstate /> */}
@@ -114,13 +125,17 @@ const Home = () => {
               alt="/"
             />
           </div>
-          <Link to="/ali">users</Link>
+          <Link to="/state">users</Link>
+          <button onClick={toastify} className="btn btn-primary">
+            toast
+          </button>
         </Grid>
 
         {Form == 'Signin' ? <Signin /> : <Signup />}
 
         {/* <Signupform /> */}
         {/* <Signin /> */}
+        <ToastContainer />
       </Grid>
     </>
   );

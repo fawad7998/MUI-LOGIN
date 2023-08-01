@@ -1,6 +1,6 @@
 import Home from './Routes/Home';
 import Changingstate from './components/common/USESTATE';
-import {BrowserRouter, Link, Route, Routes, Router} from 'react-router-dom';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ali" element={<Changingstate />} />
+          <Route path="/state" element={<Changingstate />} />
         </Routes>
       </BrowserRouter>
     </>
