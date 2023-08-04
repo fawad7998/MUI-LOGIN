@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/state" element={<Changingstate />} />
+          <Route path="/shampigoli" element={<Changingstate />} />
         </Routes>
       </BrowserRouter>
     </>
